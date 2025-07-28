@@ -1,0 +1,225 @@
+/* Detail Page Specific Image Fallbacks for Yirga Cheffe Coffee Research App */
+
+/* Enhanced fallbacks for detail page hero images */
+.detail-image {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Page-specific detail image fallbacks with improved targeting */
+.detail-image[data-src*="geography-detail"]:not([src]),
+.detail-image:not([src])[alt*="geography"] {
+    background: linear-gradient(135deg, 
+        #2d5016 0%,     /* Deep Forest */
+        #228B22 25%,    /* Forest Green */
+        #8B4513 60%,    /* Earth Brown */
+        #DAA520 100%    /* Golden Mountain */
+    );
+}
+
+.detail-image[data-src*="geography-detail"]:not([src])::before,
+.detail-image:not([src])[alt*="geography"]::before {
+    content: '🏔️🌿';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.4;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.detail-image[data-src*="history-detail"]:not([src]),
+.detail-image:not([src])[alt*="history"] {
+    background: linear-gradient(135deg,
+        #8B4513 0%,     /* Ancient Brown */
+        #CD853F 30%,    /* Clay */
+        #A0522D 70%,    /* Pottery */
+        #FF6347 100%    /* Ember Glow */
+    );
+}
+
+.detail-image[data-src*="history-detail"]:not([src])::before,
+.detail-image:not([src])[alt*="history"]::before {
+    content: '📜⏳';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.4;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.detail-image[data-src*="culture-detail"]:not([src]),
+.detail-image:not([src])[alt*="culture"] {
+    background: linear-gradient(135deg,
+        #FFD700 0%,     /* Sacred Gold */
+        #FFF8DC 30%,    /* Ceremony White */
+        #DC143C 70%,    /* Traditional Red */
+        #8B4513 100%    /* Community Brown */
+    );
+}
+
+.detail-image[data-src*="culture-detail"]:not([src])::before,
+.detail-image:not([src])[alt*="culture"]::before {
+    content: '👥☕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.4;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.detail-image[data-src*="technology-detail"]:not([src]),
+.detail-image:not([src])[alt*="technology"] {
+    background: linear-gradient(135deg,
+        #6F4E37 0%,     /* Coffee Brown */
+        #228B22 30%,    /* Quality Green */
+        #C0C0C0 70%,    /* Modern Silver */
+        #4169E1 100%    /* Innovation Blue */
+    );
+}
+
+.detail-image[data-src*="technology-detail"]:not([src])::before,
+.detail-image:not([src])[alt*="technology"]::before {
+    content: '⚙️🔬';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    opacity: 0.4;
+    z-index: 1;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+/* Enhanced texture overlay for detail images */
+.detail-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 30% 40%, rgba(255,255,255,0.1) 2px, transparent 2px),
+        radial-gradient(circle at 70% 80%, rgba(255,255,255,0.05) 1px, transparent 1px),
+        radial-gradient(circle at 20% 70%, rgba(0,0,0,0.05) 1px, transparent 1px),
+        linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.02) 50%, transparent 60%);
+    background-size: 40px 40px, 60px 60px, 30px 30px, 80px 80px;
+    opacity: 0.8;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    animation: subtleTextureMove 8s ease-in-out infinite;
+}
+
+@keyframes subtleTextureMove {
+    0%, 100% { 
+        background-position: 0% 0%, 100% 100%, 50% 50%, 0% 100%; 
+    }
+    50% { 
+        background-position: 20% 20%, 80% 80%, 70% 30%, 100% 0%; 
+    }
+}
+
+/* Loading state specific to detail images */
+.detail-image.loading {
+    background: linear-gradient(90deg, 
+        rgba(139, 69, 19, 0.2) 25%, 
+        rgba(139, 69, 19, 0.4) 50%, 
+        rgba(139, 69, 19, 0.2) 75%
+    );
+    background-size: 200% 100%;
+    animation: detailShimmer 2.5s infinite;
+}
+
+@keyframes detailShimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* Error state for detail images */
+.detail-image.image-error {
+    background: linear-gradient(135deg, #8B4513, #A0522D);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.detail-image.image-error::before {
+    content: '🖼️';
+    font-size: 4rem;
+    opacity: 0.3;
+}
+
+/* Responsive adjustments for detail images */
+@media (max-width: 768px) {
+    .detail-image::before {
+        font-size: 3.5rem;
+    }
+    
+    .detail-image::after {
+        background-size: 30px 30px, 45px 45px, 25px 25px, 60px 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-image::before {
+        font-size: 2.5rem;
+    }
+    
+    .detail-image {
+        height: 200px;
+    }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+    .detail-image::after {
+        animation: none;
+    }
+    
+    .detail-image.loading {
+        animation: none;
+        background: rgba(139, 69, 19, 0.3);
+    }
+}
+
+@media (prefers-contrast: high) {
+    .detail-image::before {
+        opacity: 0.8;
+        font-weight: bold;
+        text-shadow: 3px 3px 6px rgba(0,0,0,0.9);
+    }
+    
+    .detail-image::after {
+        display: none;
+    }
+}
+
+/* Print styles for detail images */
+@media print {
+    .detail-image::after {
+        display: none;
+    }
+    
+    .detail-image {
+        background: #f5f5f5 !important;
+        border: 2px solid #8B4513;
+    }
+    
+    .detail-image::before {
+        color: #8B4513 !important;
+        opacity: 0.6 !important;
+    }
+}
