@@ -1,0 +1,29 @@
+Image Placeholder Information for Yirga Cheffe Coffee Research App
+
+Required Images:
+1. geography.jpg - Mountainous Yirga Cheffe terrain with coffee plants
+2. history.jpg - Traditional Ethiopian coffee ceremony with ancient pottery
+3. culture.jpg - Ethiopian women performing traditional coffee ceremony
+4. technology.jpg - Modern coffee processing equipment alongside traditional methods
+
+Detail Page Images:
+1. geography-detail.jpg - Aerial view of Yirga Cheffe coffee growing regions
+2. history-detail.jpg - Historical timeline of Ethiopian coffee cultivation
+3. culture-detail.jpg - Ethiopian women performing traditional coffee ceremony
+4. technology-detail.jpg - Traditional and modern coffee processing methods side by side
+
+Image Specifications:
+- Format: JPG
+- Dimensions: 1200x800px recommended for main images
+- Quality: High resolution for web display
+- Theme: Coffee farming, Ethiopian culture, traditional methods, natural landscapes
+
+Alternative: The app is designed to work with placeholder images or can use CSS background colors when images are not available.
+
+To add real images:
+1. Place images in the /assets/ directory
+2. Ensure filenames match those referenced in HTML
+3. Optimize images for web performance (compress to ~200KB per image)
+4. Consider using WebP format for better compression
+
+Current Status: App is fully functional without images - CSS provides fallback styling.
