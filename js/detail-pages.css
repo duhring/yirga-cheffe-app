@@ -1,0 +1,342 @@
+/* Detail Pages Specific Styles */
+
+.detail-header {
+    background: linear-gradient(135deg, #6B4226 0%, #8B4513 50%, #A0522D 100%);
+    color: white;
+    padding: 2rem 0 4rem;
+}
+
+.breadcrumb {
+    padding: 1rem 2rem;
+}
+
+.breadcrumb a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.breadcrumb a:hover {
+    color: white;
+}
+
+.detail-hero {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.detail-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.detail-subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    font-weight: 300;
+}
+
+.detail-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.overview {
+    padding: 4rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.detail-image {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+}
+
+.overview-text .lead {
+    font-size: 1.3rem;
+    line-height: 1.7;
+    color: #5a4037;
+    margin-bottom: 2rem;
+}
+
+.content-grid {
+    display: grid;
+    gap: 4rem;
+    padding: 2rem 0;
+}
+
+.content-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.content-section h2 {
+    font-size: 2.2rem;
+    color: #8B4513;
+    margin-bottom: 1.5rem;
+    border-bottom: 3px solid #f4e4c1;
+    padding-bottom: 0.5rem;
+}
+
+.content-section h3 {
+    font-size: 1.5rem;
+    color: #A0522D;
+    margin-bottom: 1rem;
+}
+
+.content-section h4 {
+    font-size: 1.2rem;
+    color: #8B4513;
+    margin-bottom: 0.8rem;
+}
+
+.content-section p {
+    line-height: 1.7;
+    color: #5a4037;
+    margin-bottom: 1.5rem;
+}
+
+.highlight-box {
+    background: linear-gradient(135deg, #f4e4c1, #f9f1e4);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border-left: 5px solid #8B4513;
+}
+
+.highlight-box ul {
+    margin: 1rem 0;
+    padding-left: 0;
+    list-style: none;
+}
+
+.highlight-box li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(139, 69, 19, 0.1);
+}
+
+.highlight-box li:last-child {
+    border-bottom: none;
+}
+
+.climate-stats {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.stat-item {
+    background: #f9f7f4;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-align: center;
+    border: 2px solid #f4e4c1;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.stat-item h4 {
+    font-size: 1.3rem;
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.soil-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.feature {
+    background: #f9f7f4;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-left: 4px solid #8B4513;
+}
+
+.feature h4 {
+    color: #8B4513;
+    margin-bottom: 0.8rem;
+}
+
+.microclimate-info {
+    background: linear-gradient(135deg, #f0f8f0, #e8f5e8);
+    padding: 2rem;
+    border-radius: 15px;
+    margin: 2rem 0;
+    border-left: 5px solid #228B22;
+}
+
+.microclimate-info ul {
+    margin-top: 1rem;
+    padding-left: 1rem;
+}
+
+.microclimate-info li {
+    margin-bottom: 0.8rem;
+    line-height: 1.6;
+}
+
+.sustainability-features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin: 2rem 0;
+}
+
+.sustain-item {
+    background: linear-gradient(135deg, #e8f5e8, #f0f8f0);
+    padding: 1.5rem;
+    border-radius: 12px;
+    border-top: 4px solid #228B22;
+}
+
+.sustain-item h4 {
+    color: #228B22;
+    margin-bottom: 0.8rem;
+}
+
+.related-topics {
+    padding: 4rem 0;
+    background: #f9f7f4;
+    margin: 4rem -2rem 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+.related-topics h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: #8B4513;
+    margin-bottom: 2rem;
+}
+
+.related-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.related-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    text-decoration: none;
+    color: inherit;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.related-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+}
+
+.related-card h3 {
+    color: #8B4513;
+    margin-bottom: 0.5rem;
+}
+
+.related-card p {
+    color: #5a4037;
+    margin: 0;
+    font-size: 0.95rem;
+}
+
+/* Responsive Design for Detail Pages */
+@media (max-width: 768px) {
+    .detail-hero h1 {
+        font-size: 2.2rem;
+    }
+    
+    .overview {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        padding: 2rem 0;
+    }
+    
+    .detail-image {
+        height: 250px;
+    }
+    
+    .overview-text .lead {
+        font-size: 1.1rem;
+    }
+    
+    .content-section {
+        padding: 2rem;
+    }
+    
+    .content-section h2 {
+        font-size: 1.8rem;
+    }
+    
+    .climate-stats {
+        grid-template-columns: 1fr;
+    }
+    
+    .soil-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .sustainability-features {
+        grid-template-columns: 1fr;
+    }
+    
+    .related-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .detail-content {
+        padding: 0 1rem;
+    }
+    
+    .related-topics {
+        margin-left: -1rem;
+        margin-right: -1rem;
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .detail-header {
+        padding: 1rem 0 2rem;
+    }
+    
+    .detail-hero {
+        padding: 0 1rem;
+    }
+    
+    .detail-hero h1 {
+        font-size: 1.8rem;
+    }
+    
+    .content-section {
+        padding: 1.5rem;
+    }
+    
+    .highlight-box {
+        padding: 1.5rem;
+    }
+}

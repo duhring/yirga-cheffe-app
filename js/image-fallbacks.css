@@ -1,0 +1,229 @@
+/* Image Fallback Styles for Yirga Cheffe Coffee Research App */
+/* Artistic CSS backgrounds when images are not available */
+
+/* Main Card Fallbacks */
+.card[data-topic="geography"] .card-image {
+    background: linear-gradient(135deg, 
+        #2d5016 0%,     /* Forest Green */
+        #228B22 25%,    /* Nature Green */ 
+        #8B4513 75%,    /* Earth Brown */
+        #DAA520 100%    /* Golden Light */
+    );
+    position: relative;
+    overflow: hidden;
+}
+
+.card[data-topic="geography"] .card-image::before {
+    content: '🏔️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.card[data-topic="history"] .card-image {
+    background: linear-gradient(135deg,
+        #CD853F 0%,     /* Ancient Clay */
+        #A0522D 35%,    /* Pottery Brown */
+        #8B4513 65%,    /* Rich Brown */
+        #FF6347 100%    /* Ember Glow */
+    );
+    position: relative;
+}
+
+.card[data-topic="history"] .card-image::before {
+    content: '⚱️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.card[data-topic="culture"] .card-image {
+    background: linear-gradient(135deg,
+        #FFD700 0%,     /* Sacred Gold */
+        #FFF8DC 35%,    /* Ceremony White */
+        #DC143C 65%,    /* Traditional Red */
+        #8B4513 100%    /* Community Brown */
+    );
+    position: relative;
+}
+
+.card[data-topic="culture"] .card-image::before {
+    content: '☕';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+.card[data-topic="technology"] .card-image {
+    background: linear-gradient(135deg,
+        #6F4E37 0%,     /* Natural Coffee */
+        #228B22 35%,    /* Quality Green */
+        #C0C0C0 65%,    /* Modern Silver */
+        #4169E1 100%    /* Innovation Blue */
+    );
+    position: relative;
+}
+
+.card[data-topic="technology"] .card-image::before {
+    content: '⚙️';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 4rem;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* Detail Page Header Fallbacks */
+.detail-image {
+    background: linear-gradient(135deg, #8B4513 0%, #A0522D 50%, #CD853F 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 5rem;
+    opacity: 0.7;
+    position: relative;
+}
+
+/* Page-specific detail image fallbacks */
+body:has([href*="geography"]) .detail-image {
+    background: linear-gradient(135deg, #2d5016, #228B22, #8B4513, #DAA520);
+}
+
+body:has([href*="geography"]) .detail-image::before {
+    content: '🌄 🌿';
+}
+
+body:has([href*="history"]) .detail-image {
+    background: linear-gradient(135deg, #CD853F, #A0522D, #8B4513, #FF6347);
+}
+
+body:has([href*="history"]) .detail-image::before {
+    content: '📜 ⏳';
+}
+
+body:has([href*="culture"]) .detail-image {
+    background: linear-gradient(135deg, #FFD700, #FFF8DC, #DC143C, #8B4513);
+}
+
+body:has([href*="culture"]) .detail-image::before {
+    content: '👥 🎭';
+}
+
+body:has([href*="technology"]) .detail-image {
+    background: linear-gradient(135deg, #6F4E37, #228B22, #C0C0C0, #4169E1);
+}
+
+body:has([href*="technology"]) .detail-image::before {
+    content: '🔬 ⚙️';
+}
+
+/* Add artistic texture effects */
+.card-image::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,0.1) 1px, transparent 1px),
+        radial-gradient(circle at 80% 80%, rgba(255,255,255,0.05) 1px, transparent 1px),
+        radial-gradient(circle at 40% 60%, rgba(0,0,0,0.05) 1px, transparent 1px);
+    background-size: 30px 30px, 50px 50px, 25px 25px;
+    opacity: 0.8;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+}
+
+/* Hover effects for fallback images */
+.card:hover .card-image::before {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.5;
+    transition: all 0.4s ease;
+}
+
+.card:hover .card-image::after {
+    opacity: 1;
+    animation: textureShift 2s ease-in-out infinite;
+}
+
+@keyframes textureShift {
+    0%, 100% { 
+        background-position: 0% 0%, 100% 100%, 50% 50%; 
+    }
+    50% { 
+        background-position: 10% 10%, 90% 90%, 60% 40%; 
+    }
+}
+
+/* Ensure fallbacks work when images fail to load */
+.card-image img {
+    position: relative;
+    z-index: 2;
+}
+
+.card-image img[src=""]:not([src]),
+.card-image img:not([src]),
+.card-image img[src=""]:before {
+    display: none;
+}
+
+/* Loading state for images */
+.card-image.loading {
+    background: linear-gradient(90deg, 
+        rgba(139, 69, 19, 0.1) 25%, 
+        rgba(139, 69, 19, 0.2) 50%, 
+        rgba(139, 69, 19, 0.1) 75%
+    );
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200% 0;
+    }
+    100% {
+        background-position: 200% 0;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .card-image::before {
+        opacity: 0.8;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.8);
+    }
+    
+    .card-image::after {
+        display: none;
+    }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .card-image::after {
+        animation: none;
+    }
+    
+    .card:hover .card-image::before {
+        transform: translate(-50%, -50%);
+        transition: none;
+    }
+}
